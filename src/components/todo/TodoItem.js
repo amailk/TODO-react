@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const TodoItem = (props) => {
-  const handleToggle = () => props.handleToggle(props.id)
+  const handleToggle = props.handleToggle.bind(null, props.id)
   return (
     <li>
       <input type="checkbox" onChange={handleToggle}
