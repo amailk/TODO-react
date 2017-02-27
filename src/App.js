@@ -13,9 +13,6 @@ class App extends Component {
   ],
   currentTodo: ''
   }
-  constructor() {
-    super()
-  }
 
   handleSubmit = (evt) => {
     evt.preventDefault()
