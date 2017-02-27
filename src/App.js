@@ -21,13 +21,17 @@ class App extends Component {
 
   handleSubmit(evt) {
     evt.preventDefault()
-    const newId = generateId()
-    const newTodo = {id: newId, name: this.state.currentTodo, isComplete: false}
-    const updatedTodos = addTodo(this.state.todos, newTodo)
-    this.setState({
-      todos: updatedTodos,
-      currentTodo: ''
-    })
+    if(this.state.currentTodo) {
+      const newId = generateId()
+      const newTodo = {id: newId, name: this.state.currentTodo, isComplete: false}
+      const updatedTodos = addTodo(this.state.todos, newTodo)
+      this.setState({
+        todos: updatedTodos,
+        currentTodo: ''
+      })
+    } else {
+      //
+    }
   }
 
   handleInputChange (evt) {
