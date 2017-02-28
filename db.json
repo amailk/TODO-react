@@ -29,6 +29,11 @@
       "id": 65725,
       "name": "Unpack suitcase",
       "isComplete": false
+    },
+    {
+      "id": 74978,
+      "name": "Read HP Goblet",
+      "isComplete": false
     }
   ]
 }
